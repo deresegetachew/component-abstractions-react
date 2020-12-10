@@ -6,11 +6,12 @@ import {withData,withDataUsingCurrying} from './withData';
 const Speakers = ({data,speakers}) => {
     return (
         <div>
+            <h1>Using HOC Component</h1>
             {data}
-            <h1>Speakers Data</h1>
+            <h3>Speakers Data</h3>
             <ul>
             {speakers.map(({ id, name }) => {
-                return <li>{name}</li>
+                return <li key={id + 'hoc'}>{name}</li>
             })}
                 </ul>
         </div>
